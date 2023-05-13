@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gamer.Game.RhombusGame" 
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#383838">
+
+    <StackLayout VerticalOptions="FillAndExpand">
+
+        <Grid
+            x:Name="gridView"
+            Margin="60,0,60,0"
+            HorizontalOptions="Center"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label FontSize="3"></Label>
+            <Button x:Name="Sign1" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="White" CornerRadius="40"></Button>
+            <Button x:Name="Sign2" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="White" CornerRadius="40"></Button>
+            <Button x:Name="Sign3" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="White" CornerRadius="40"></Button>
+            <Button x:Name="Sign4" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" BackgroundColor="White" CornerRadius="40"></Button>
+            <Button x:Name="Sign5" Grid.Row="1" Grid.Column="8" Grid.ColumnSpan="2" BackgroundColor="White" CornerRadius="40"></Button>
+
+            <Button Pressed="Btn1_Clicked" x:Name="Btn1" Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="#575cff" CornerRadius="13" ></Button>
+            <Button Pressed="Btn2_Clicked" x:Name="Btn2" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="#575cff" CornerRadius="13" ></Button>
+            <Button Pressed="Btn3_Clicked" x:Name="Btn3" Grid.Row="3" Grid.RowSpan="2" Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="#575cff" CornerRadius="13" ></Button>
+            <Button Pressed="Btn4_Clicked" x:Name="Btn4" Grid.Row="3" Grid.RowSpan="2" Grid.Column="6" Grid.ColumnSpan="2" BackgroundColor="#575cff" CornerRadius="13" ></Button>
+            <Button Pressed="Btn5_Clicked" x:Name="Btn5" Grid.Row="3" Grid.RowSpan="2" Grid.Column="8" Grid.ColumnSpan="2" BackgroundColor="#575cff" CornerRadius="13" ></Button>
+
+            <Grid x:Name="GameOver" Grid.Row="0" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="10" Margin="-60,0,-60,0">
+                <Button IsEnabled="False"  BackgroundColor="#6000" ></Button>
+                <Button IsEnabled="False"  CornerRadius="50" Margin="100,30,100,40" BackgroundColor="#575cff" BorderWidth="10" BorderColor="#3d41bf" ></Button>
+
+                <Label HorizontalOptions="Center" x:Name="StartLabel" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="В течении минуты" TextColor="White" FontSize="26" Margin="120,0,120,100"  ></Label>
+                <Button Clicked="GameOver_Clicked" CornerRadius="50" Text="Начать" BackgroundColor="White" TextColor="#575cff" FontAttributes="Bold" FontSize="35" WidthRequest="200" HeightRequest="80" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,200,0,0"  ></Button>
+            </Grid>
+        </Grid>
+    </StackLayout>
+</ContentPage>

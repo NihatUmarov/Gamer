@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gamer.Game.ReactionToExit"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="LightBlue">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid x:Name="GameLocation">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label FontSize="124"></Label>
+                <Label FontSize="200" TextColor="Black" Text="10" IsVisible="false" x:Name="TimeLabel" ></Label>
+                <Button BackgroundColor="#363636" Grid.Column="0" Grid.ColumnSpan="10" Grid.Row="9" Grid.RowSpan="2" ></Button>
+                <ImageButton x:Name="Enemy" BackgroundColor="#00000000" Source="Enemy" Grid.Column="4" Grid.Row="4" Grid.RowSpan="6"></ImageButton>
+                <ImageButton Source="wall" Aspect="Fill" BackgroundColor="#363636" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" Grid.RowSpan="10" ></ImageButton>
+                <ImageButton x:Name="Aim" TranslationX="95" BackgroundColor="#00000000" Source="aim" Grid.Column="4" Grid.Row="4" Grid.RowSpan="5"></ImageButton>
+                <ImageButton Source="Shot" x:Name="FireButton" Grid.Row="7" Grid.RowSpan="4" Grid.Column="8" Grid.ColumnSpan="2" BackgroundColor="#0000"  Margin="0,-20,20,20" ></ImageButton>
+                
+                <Grid x:Name="GameOver" Grid.Row="0" Grid.RowSpan="11" Grid.Column="0" Grid.ColumnSpan="10" Margin="-20,0,-20,-15">
+                    <Button IsEnabled="False"  BackgroundColor="#6000" ></Button>
+                    <Button IsEnabled="False"  CornerRadius="50" Margin="100,30,100,40" BackgroundColor="#575cff" BorderWidth="10" BorderColor="#3d41bf" ></Button>
+
+                    <Label HorizontalOptions="Center" x:Name="StartLabel" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="В течении 15 секунд выйдет противник, вы должны успеть его убить" TextColor="White" FontSize="26" Margin="120,0,120,100"  ></Label>
+                    <Button Clicked="GameOver_Clicked" CornerRadius="50" Text="Начать" BackgroundColor="White" TextColor="#575cff" FontAttributes="Bold" FontSize="35" WidthRequest="200" HeightRequest="80" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,200,0,0"  ></Button>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

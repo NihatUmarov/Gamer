@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gamer.Game.BallGame"
+             BackgroundColor="#363636"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout VerticalOptions="FillAndExpand">
+        <Grid HorizontalOptions="Center" VerticalOptions="FillAndExpand">
+            <Button IsEnabled="False"  BackgroundColor="#6000" x:Name="GameOver1" ></Button>
+            <Button IsEnabled="False"  CornerRadius="50" Margin="100,20,100,20" BackgroundColor="#575cff" x:Name="GameOver2" BorderWidth="10" BorderColor="#3d41bf" ></Button>
+            
+            <Label HorizontalOptions="Center" x:Name="StartLabel" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="У вас есть минута, лопните как можно больше шариков" TextColor="White" FontSize="30" Margin="120,0,120,100"  ></Label>
+            <Button x:Name="GameOver3" Clicked="GameOver_Clicked" CornerRadius="50" Text="Начать" BackgroundColor="White" TextColor="#575cff" FontAttributes="Bold" FontSize="35" WidthRequest="200" HeightRequest="80" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,200,0,0"  ></Button>
+        
+        <Grid
+            x:Name="gridView"
+            Margin="0,0,0,0"
+            HorizontalOptions="Center"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ImageButton IsVisible="False" x:Name="Ball" BackgroundColor="#0000" Source="Ball" ></ImageButton>
+        </Grid>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

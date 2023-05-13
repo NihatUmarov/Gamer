@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gamer.MainPage"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#fff9b5">
+
+    <StackLayout VerticalOptions="FillAndExpand">
+
+        <Grid
+            x:Name="gridView"
+            Margin="140,0,140,40"
+            HorizontalOptions="Center"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label x:Name="GameSelect" Grid.Column="0" Grid.ColumnSpan="3" HorizontalOptions="Center" Text="Выберите игру" TextColor="Black" FontSize="30" Padding="0,10,0,0"></Label>
+
+
+            <ImageButton Source="IconRhombusGame" Clicked="Rhombus_Clicked" Grid.Row="1" Grid.Column="0" BackgroundColor="#363636" CornerRadius="20" ></ImageButton>
+            <ImageButton Source="IconBallGame" Clicked="GameBall_Clicked" Grid.Row="1" Grid.Column="1" BackgroundColor="#363636" CornerRadius="20" ></ImageButton>
+            <ImageButton Source="IconReactionGame" Clicked="ReactionToExit" Grid.Row="1" Grid.Column="2" BackgroundColor="#363636" CornerRadius="20" ></ImageButton>
+            <ImageButton Source="IconSequenceNumbers" Clicked="SequenceNumbers" Grid.Row="2" Grid.Column="0" BackgroundColor="#363636" CornerRadius="20" ></ImageButton>
+            <ImageButton Source="IconReactToExit" Clicked="GameRect_Clicked" Aspect="Fill" Grid.Row="2" Grid.Column="1" BackgroundColor="#363636" CornerRadius="20"></ImageButton>
+            <ImageButton Source="IconColorGame" Clicked="GameColor_Clicked" Grid.Row="2" Grid.Column="2" BackgroundColor="#363636" CornerRadius="20" ></ImageButton>
+            <Grid Grid.Row="1" x:Name="LevelCheck" IsVisible="False">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.RowSpan="3" Grid.ColumnSpan="3" IsEnabled="False" CornerRadius="20" BackgroundColor="#5000" ></Button>
+                <Button Clicked="Easy_Clicked" Grid.Row="0" Grid.ColumnSpan="3" Text="Легкий" TextColor="White" FontSize="18"  BackgroundColor="#575cff" CornerRadius="20" BorderWidth="2" BorderColor="#3d41bf" FontAttributes="Bold" Margin="10,5,10,-5" ></Button>
+                <Button Clicked="Medium_Clicked" Grid.Row="1" Grid.ColumnSpan="3" Text="Средний" TextColor="White" FontSize="18"  BackgroundColor="#575cff" CornerRadius="20" BorderWidth="2" BorderColor="#3d41bf" Margin="10,3,10,0" FontAttributes="Bold"></Button>
+                <Button Clicked="Hight_Clicked" Grid.Row="2" Grid.ColumnSpan="3" Text="Сложный" TextColor="White" FontSize="18"  BackgroundColor="#575cff" CornerRadius="20" BorderWidth="2" BorderColor="#3d41bf" FontAttributes="Bold" Margin="10,-2,10,5" ></Button>
+                <Button BackgroundColor="#0000" ></Button>
+            </Grid>
+        </Grid>
+    </StackLayout>
+</ContentPage>

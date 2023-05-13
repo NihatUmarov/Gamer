@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Gamer.Game.GameColor"
+             Shell.NavBarIsVisible="False"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#383838">
+
+    <StackLayout VerticalOptions="FillAndExpand">
+
+        <Grid
+            x:Name="gridView"
+            HorizontalOptions="Center"
+            VerticalOptions="FillAndExpand">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Label FontSize="3"></Label>
+            <Button x:Name="BackColor" Grid.RowSpan="5" Grid.ColumnSpan="20" BackgroundColor="#0000" ></Button>
+           
+            <Button Pressed="YellowBtn" Grid.Row="1" Grid.RowSpan="3" BackgroundColor="Yellow" Grid.Column="2" Grid.ColumnSpan="4" CornerRadius="20" BorderWidth="7" BorderColor="Black" ></Button>
+            <Button Pressed="RedBtn" Grid.Row="1" Grid.RowSpan="3" BackgroundColor="Red" Grid.Column="6" Grid.ColumnSpan="4" CornerRadius="20" BorderWidth="7" BorderColor="Black" ></Button>
+            <Button Pressed="BlueBtn" Grid.Row="1" Grid.RowSpan="3" BackgroundColor="Blue" Grid.Column="10" Grid.ColumnSpan="4" CornerRadius="20" BorderWidth="7" BorderColor="Black" ></Button>
+            <Button Pressed="GreenBtn" Grid.Row="1" Grid.RowSpan="3" BackgroundColor="LimeGreen" Grid.Column="14" Grid.ColumnSpan="4" CornerRadius="20" BorderWidth="7" BorderColor="Black" ></Button>
+            <Grid x:Name="GameOver" Grid.Row="0" Grid.RowSpan="5" Grid.Column="0" Grid.ColumnSpan="20" Margin="0,0,0,0" >
+                <Button IsEnabled="False"  BackgroundColor="#6000" ></Button>
+                <Button IsEnabled="False"  CornerRadius="50" Margin="100,30,100,20" BackgroundColor="#575cff" BorderWidth="10" BorderColor="#3d41bf" ></Button>
+
+                <Label HorizontalOptions="Center" x:Name="StartLabel" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="В течении минуты, нажимайте на правильный цвет" TextColor="White" FontSize="26" Margin="120,0,120,100"  ></Label>
+                <Button Clicked="GameOver_Clicked" CornerRadius="50" Text="Начать" BackgroundColor="White" TextColor="#575cff" FontAttributes="Bold" FontSize="35" WidthRequest="200" HeightRequest="80" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,200,0,0"  ></Button>
+            </Grid>
+        </Grid>
+    </StackLayout>
+</ContentPage>
