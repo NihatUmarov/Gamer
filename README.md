@@ -1,8 +1,9 @@
 Приложение для развитии реакции мобильных киберспортцменов
 
-вот презентаци : [Зашита диплома Нихат.pptx](https://github.com/user-attachments/files/16323845/default.pptx)
+Презентация : [Зашита диплома Нихат.pptx](https://github.com/user-attachments/files/16323845/default.pptx)
 
-вот фотографии 
+фотографии 
+
 ![image](https://github.com/user-attachments/assets/4fc2e6d9-1117-43b6-aa45-1f186527fa05)
 ![image](https://github.com/user-attachments/assets/9a4127fd-8a73-4954-92c3-4ae958207a6b)
 ![image](https://github.com/user-attachments/assets/13367ac2-1efd-4cc7-a2f7-ff0f4c204612)
